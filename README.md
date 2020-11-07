@@ -11,15 +11,16 @@ The **investigation**, **study** and **assay** (ISA) model is one formalization 
 and defines both hierachical data schemas (XML, JSON) as well as a tab delimited format (Tab)
 to fascilitate data transfer and readability.
 
-### What does our tool solve?
+### What problem does our tool solve?
 
-While frameworks like the ISA exists, there is a barrier for data generators to compile their data in these standardized formats. Our tool is a Google sheets application which facilitates the collection of (meta)data according to field/domain standards using the ISA data model
+Our tool is a Google sheets application which facilitates the collection of metadata according to 
+[schema](https://github.com/ISA-tools/Configuration-Files/tree/master/isaconfig-default_v2015-07-02) 
+developed by the ISA commons.
+While frameworks like the ISA exists, there is a barrier for data generators to compile their data in these standardized formats. 
+Through our tool, users are able to generate ISA commons compliant spreadsheets where metadata about investigations can be collected
+and continually validated without requiring detailed familiarity of schema structure up front.
 
-## Objective:
-
-Develop a (meta)data collection tool using the Google sheets App framework in order to reduce barriers for data collection and sharing that supports the FAIR data principles.
-
-![alt text](https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/docs_update_intro/static/ISASheetsWorkflow.png)
+![workflow diagram](https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/main/static/ISASheetsWorkflow.png)
 
 ## How to use our tool:
 
