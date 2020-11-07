@@ -9,7 +9,7 @@ This paradigm can go a long way to ensuring that data is easily sharable between
 and furthers reproducibility by providing rich, standardized metadata for samples.
 The **investigation**, **study** and **assay** (ISA) model is one formalization of FAIR practices,
 and defines both hierachical data schemas (XML, JSON) as well as a tab delimited format (Tab)
-to fascilitate data transfer and readability.
+to facilitate data transfer and readability.
 
 ### What problem does our tool solve?
 
