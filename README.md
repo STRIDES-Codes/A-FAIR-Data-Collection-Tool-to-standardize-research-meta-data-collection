@@ -17,3 +17,4 @@ What is [the name of this tool]?
 
 
 How do I use it?
+This tool functions primarily on __ data that are formated as XML. 
