@@ -1,8 +1,14 @@
 // This document is used to parse the XML templates
 // Use this function to run the next two blocks
 function runTest(){
-  var fields = getXML('https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/main/XML/investigation.xml', 'http://www.ebi.ac.uk/bii/isatab_configuration#');
-  var parsed = processXMLinvestigation(fields); 
+  // var fields = getXML('https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/main/XML/investigation.xml', 'http://www.ebi.ac.uk/bii/isatab_configuration#');
+  var fields = getXML('https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/UsersMenu/XML/studySample.xml', 'http://www.ebi.ac.uk/bii/isatab_configuration#');
+  var templateType = fields[0].getAttribute('term-label').getValue();
+  if (templateType == '[investigation]'){
+    var parsed = processXMLinvestigation(fields); 
+  } else if (templateType == '[Sample]'){
+    var parsed = processXMLstudy(fields); 
+  }
 }
 
 
@@ -25,7 +31,6 @@ function processXMLinvestigation(fields){
   for (var i = 0; i < fields.length; i++) {
     if (fields[i].getName() == 'field') {
       var addField = addFieldColumn('investigation', fields[i])
-      Logger.log('field')
     } 
   }
 }
@@ -39,8 +44,7 @@ function processXMLstudy(fields){
     }
     
     if (fields[i].getName() == 'field') {
-      
-      Logger.log('field')
+      var addField = addFieldColumn('studySample', fields[i])
     } 
   }
 }
