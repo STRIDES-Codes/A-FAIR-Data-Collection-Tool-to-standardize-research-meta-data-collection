@@ -20,7 +20,7 @@ While frameworks like the ISA exists, there is a barrier for data generators to 
 Through our tool, users are able to generate ISA commons compliant spreadsheets where metadata about investigations can be collected
 and continually validated without requiring detailed familiarity of schema structure up front.
 
-![alt text](https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/docs_update_intro/static/ISASheetsWorkflow.png)
+![workflow diagram](https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/main/static/ISASheetsWorkflow.png)
 
 ## How to use our tool:
 
