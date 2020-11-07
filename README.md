@@ -19,6 +19,8 @@ While frameworks like the ISA exists, there is a barrier for data generators to 
 
 Develop a (meta)data collection tool using the Google sheets App framework in order to reduce barriers for data collection and sharing that supports the FAIR data principles.
 
+![alt text](https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/docs_update_intro/static/ISASheetsWorkflow.png)
+
 ## How to use our tool:
 
 ### Loading an ISA Tab template from schema
