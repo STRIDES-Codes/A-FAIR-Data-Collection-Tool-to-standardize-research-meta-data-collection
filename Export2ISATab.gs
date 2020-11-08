@@ -34,13 +34,65 @@ function sheetJoin(sheet, sep) {
 }
 
 /**
+ * Display a pop-up box which will ask for the user to input a google drive path to write data.
+*/
+function getPath(){
+  var ui = SpreadsheetApp.getUi();
+  var input = ui.prompt('Input google drive path where you would like to save data.', 
+                        ui.ButtonSet.OK_CANCEL);
+  
+  if (input.getSelectedButton() == ui.Button.OK){
+    return input.getResponseText();  
+  } else {
+    return null;
+  }
+}
+
+/**
+ * Take user inputed path, and recursively create folders before returning last folder.
+ * @return {Folder}
+*/
+function getExportFolder() {
+  // Establish and parse path
+  var path = getPath();
+  if (path == "") {
+      path = "isa_sheets_export" + new Date().getTime();
+  } else if (!path) {
+      Logger.log("Path was null");
+      return null;
+  }
+  path = path.split("/");
+  
+  // Recursively create folders
+  var folder = DriveApp.getRootFolder();
+  for (var i = 0; i < path.length; i++) {
+    if (path[i] == "") {
+      continue;
+    }
+    
+    var sub_folder_iter = folder.getFoldersByName(path[i]);
+    if (!sub_folder_iter.hasNext()) {
+      folder = folder.createFolder(path[i]);
+    } else {
+      folder = sub_folder_iter.next();
+      if (sub_folder_iter.hasNext()) {
+        throw new Error( "Pathname is ambiguous." );
+      }
+    }
+  }
+  
+  return folder;
+}
+
+/**
  * Attempts to write each sheet in the current spreadsheet to a folder
- * TODO: Needs to be able to take user inputed path.
  */
 function exportAllSheets() {
-  // Create temporary export folder
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  var folder = DriveApp.createFolder("temp_export_" + new Date().getTime());
+  var folder = getExportFolder();
+  if (!folder) {
+    return null;
+  }
   
   // Write each files
   var sheets = spreadsheet.getSheets();
