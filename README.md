@@ -43,6 +43,8 @@ From the `repository` drop down menu, select the repository
 `[yourGithubAccount]/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection`.
 After selecting the repository, be sure that the `main` branch is selected.
 
+![repo bar](static/installation_github_repo_bar.png)
+
 5. **Pull the repository:**
 Press the `pull` icon and select `pull again` when the diff screen apears.
 
