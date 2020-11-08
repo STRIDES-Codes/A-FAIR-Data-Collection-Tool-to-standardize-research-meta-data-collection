@@ -46,7 +46,7 @@ After selecting the repository, be sure that the `main` branch is selected.
 ![repo bar](static/installation_github_repo_bar.png)
 
 5. **Pull the repository:**
-Press the `pull` icon and select `pull again` when the diff screen apears.
+Press the ![pull](static/installation_github_pull_icon.png) icon and select `pull` again when the diff screen apears.
 
 6. **Create a new spreadsheet and deploy:**
 In a new tab, create a new Google Sheets document and give it a name that makes sense to you.
