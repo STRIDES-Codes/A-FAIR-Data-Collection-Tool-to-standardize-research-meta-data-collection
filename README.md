@@ -1,4 +1,5 @@
-# ISASheets ![logo](static/ISASheetLogo.png)
+# ISASheets 
+![logo](static/ISASheetLogo.png)
 
 ### What is FAIR data and the ISA model?
 
