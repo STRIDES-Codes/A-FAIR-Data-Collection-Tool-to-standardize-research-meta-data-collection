@@ -18,7 +18,10 @@ While frameworks like the ISA exists, there is a barrier for data generators to 
 Through our tool, users are able to generate ISA commons compliant spreadsheets where metadata about investigations can be collected
 and continually validated without requiring detailed familiarity of schema structure up front.
 
-Our tool aims to (1) Facilitate metadata collection using a familiar user interface, (2) allow the portability of (meta)data entry to the data source, (3) Facilitate the upload of structured (meta)data to the cloud for easy sharing
+Our tool aims to: 
+1. Facilitate metadata collection using a familiar user interface
+2. Allow the portability of (meta)data entry to the data source 
+3. Facilitate the upload of structured (meta)data to the cloud for easy sharing
 
 ### Overview of the tool 
 
