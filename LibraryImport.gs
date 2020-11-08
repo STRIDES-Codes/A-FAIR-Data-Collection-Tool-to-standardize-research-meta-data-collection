@@ -27,16 +27,8 @@ function listConfigsGit() {
 }
 
 function loadConfigs(configs){
-  Logger.log('here');
   Logger.log(configs);
-  Logger.log('test');
 }
-
-function test(){
-  Logger.log('here');
-  Logger.log('test');
-}
-
 
 function loadSidebar(template, title) {
   var html = (HtmlService.createTemplateFromFile(template).evaluate())
