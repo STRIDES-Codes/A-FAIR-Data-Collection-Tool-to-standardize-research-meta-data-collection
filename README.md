@@ -26,9 +26,6 @@ Our tool aims to:
 
 ## Installation
 
-### From Github
-
-### From Docker
 
 ## Using ISA-*
 
