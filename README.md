@@ -73,6 +73,7 @@ and press `test` to open a new spreadsheet with the Add-on enabled.
 1. **Menu overview**
 A new menu will appear in the add-on options. Here you can choose which action to perform
 * Add Investigation, Study, or Assay: Use to create new templates in your current sheet document
+
 ![menu overview](static/workflow_ISASheetsMenu.png)
 
 Choose any of the options and a popup requesting the url of your ISA configuration (XML format) will appear.
