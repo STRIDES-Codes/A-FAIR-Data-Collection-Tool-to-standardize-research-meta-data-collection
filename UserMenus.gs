@@ -16,11 +16,12 @@
                                                                                                                                          
 function onOpen() {
   SpreadsheetApp.getUi() 
-      .createMenu('ISA-Sheets / ISA-Attraction - MAIN MENU')
+      .createMenu('ISASheets')
       .addItem('Create new Investigation ', 'investigation')
       .addItem('Create new Study', 'inputConfigs')
       .addItem('Create new Assay ', 'inputConfigs')
       .addItem('Add column', 'addacolumn')
+      .addItem('Export All Sheets', 'exportAllSheets')
       .addSeparator()
       .addItem('Settings', 'showSettings')
       .addItem('About', 'showAbout')
