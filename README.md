@@ -26,6 +26,44 @@ Our tool aims to:
 
 ## Installation
 
+### From Github
+
+1. **Install the Google Apps Script Github Assistant:** 
+Currently, the only browser with an extension to integrate Github into the Google apps environment is Chrome. Link: [Google Apps Script GitHub Assistant](https://chrome.google.com/webstore/detail/google-apps-script-github/lfjcgcmkmjjlieihflfhjopckgpelofo?hl=en)
+
+2. **Fork the ISA-Sheets Repo:**
+For the Github Assistant to recognize the ISA-Sheets repository, you must create a fork owned by your github account.
+
+3. **Create a blank Google Apps Script project:**
+Navigate to [script.google.come](https://script.google.com/) and select `New Project` from the top left.
+Rename the project to whatever makes sense to you, e.g. ISA-Sheets.
+
+4. **Select the ISA-Sheets fork:**
+From the `repository` drop down menu, select the repository 
+`[yourGithubAccount]/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection`.
+After selecting the repository, be sure that the `main` branch is selected.
+
+![repo bar](static/installation_github_repo_bar.png)
+
+5. **Pull the repository:**
+Press the ![pull](static/installation_github_pull_icon.png) icon and select `pull` again when the diff screen apears.
+
+6. **Create a new spreadsheet and deploy:**
+In a new tab, create a new Google Sheets document and give it a name that makes sense to you.
+Navigate back to the tab with your ISA-Sheets script and select `Test as add on...` from the `run` menu.
+
+![run menu](static/installation_github_run_menu.png)
+
+In the popup window, select `Installed and enabled` from the `Installation config` menu,
+and click `select doc` to select the spreadsheet you made.
+
+![configure test](static/installation_github_configure_test.png)
+
+After clicking save, you can select the test in the `Execute Saved Test` list above 
+and press `test` to open a new spreadsheet with the Add-on enabled.
+
+![execute test](static/installation_github_execute_test.png)
+
 
 ## Using ISA-*
 
