@@ -31,3 +31,19 @@ function ammendLastRow(column, sheet, value){
   var myRange = sheet.getRange(sheet.getLastRow(), column);
   myRange.setValue(value);
 }
+
+/**
+  * Attempt to parse an XML field and deal with missing (NULL) values
+  * @param field the field from an XML file 
+  * @criteria the field-name queried
+  * @return value a string representing either the value of the XML field or NA
+*/
+function tryParse(field, criteria){
+  try {
+    var value = field.getAttribute(criteria).getValue();
+  } 
+  catch(err){
+    var value = 'NA'
+  }
+  return value
+}

@@ -3,12 +3,8 @@
 function onOpen() {
   SpreadsheetApp.getUi()
       .createMenu('Test')
-        .addItem('Test', 'runTest')
+        .addItem('Test', 'inputConfigs')
   .addToUi();
-}
-
-function testSheet(){
-  createEmpty('testsheet2', 'TRUE');
 }
 // End of testing code.
 
@@ -28,13 +24,12 @@ function addFieldData(sheetname, field){
   var template_hidden = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('_' + sheetname);
   
   // Get field information from parsed XML object
-  var header = field.getAttribute('header').getValue();
-  var data_type = field.getAttribute('data-type');
-  var file_field = field.getAttribute('is-file-field');
-  var multiple = field.getAttribute('is-multiple-value');
-  var hidden = field.getAttribute('is-hidden');
-  var forced_ontology = field.getAttribute('is-forced-ontology');
-  var protocol_type = field.getAttribute('protocol-type');  
+  var header = tryParse(field, 'header');
+  var data_type = tryParse(field, 'data-type');
+  var file_field = tryParse(field, 'is-file-field');
+  var multiple = tryParse(field, 'is-multiple-value');
+  var hidden = tryParse(field, 'is-hidden');
+  var forced_ontology = tryParse(field, 'is-forced-ontology');
   
 
   // Find the last empty header column.
@@ -50,9 +45,11 @@ function addFieldData(sheetname, field){
   // Headers also aren't recorded.
   
   addLastRow(1, template_hidden, header);
-  ammendLastRow(2, template_hidden, data_type.getValue());
-  ammendLastRow(3, template_hidden, file_field.getValue());
-  // ammendLastRow(4, template_hidden, multiple.getValue());
+  ammendLastRow(2, template_hidden, data_type);
+  ammendLastRow(3, template_hidden, file_field);
+  ammendLastRow(4, template_hidden, multiple);
+  ammendLastRow(5, template_hidden, hidden);
+  ammendLastRow(6, template_hidden, forced_ontology);
 }
 
 
