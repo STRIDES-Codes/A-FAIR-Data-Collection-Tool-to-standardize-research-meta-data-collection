@@ -1,4 +1,5 @@
-# ISA-Sheets or ISA-ATTRACTION
+# ISASheets
+![logo](https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/main/static/ISASheetLogo.png)
 
 ### What is FAIR data and the ISA model?
 
@@ -64,12 +65,33 @@ and press `test` to open a new spreadsheet with the Add-on enabled.
 
 ![execute test](static/installation_github_execute_test.png)
 
+### From the Google marketplace
+** Stay tuned...**
 
-## Using ISA-*
 
-### Loading an ISA Tab template from schema
+## Using ISASheets
+1. **Menu overview**
+![menu overview](static/workflow_ISASheetsMenu.png)
+A new menu will appear in the add-on options. Here you can choose which action to perform
+* Add Investigation, Study, or Assay: Use to create new templates in your current sheet document
 
-### Validating entered data
+Choose any of the options and a popup requesting the url of your ISA configuration (XML format) will appear.
+![urlRequest](static/workflow_ConfigurationUrl.png)
+
+2. **Finding XML configurations**
+ISASheets parses XML configurations found in Github. To obtain the URL for the XML go to the file inside the repository 
+![getXMLfile](static/workflow_GetXMLFile.png)
+
+Choose the ![rawButton](static/workflow_RawButton.png) and copy the URL at the top. Use this to enter into the pop up box then select the ![okButton](static/workflow_OKButton.png).
+ISASheets will recognized if it is an Investigation, Study, or Assay template using the XML metadata.
+
+3. **Populate your template**
+Google Sheets allows you to enter your data as you would for a standard spreadsheet
+
+4. **Export your data**
+
+## Questions and feedback
+Any inquiries or suggestions can be posted to the [issue page](https://github.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/issues). 
 
 ## People
 
