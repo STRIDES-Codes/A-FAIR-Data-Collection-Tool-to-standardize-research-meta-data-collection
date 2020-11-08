@@ -1,6 +1,4 @@
-# A FAIR Data Collection Tool to standardize research metadata collection
-
-## Introduction:
+# ISA-Sheets or ISA-ATTRACTION
 
 ### What is FAIR data and the ISA model?
 
@@ -8,22 +6,44 @@
 This paradigm can go a long way to ensuring that data is easily sharable between investigators,
 and furthers reproducibility by providing rich, standardized metadata for samples.
 The **investigation**, **study** and **assay** (ISA) model is one formalization of FAIR practices,
-and defines both hierachical data schemas (XML, JSON) as well as a tab delimited format (Tab)
-to fascilitate data transfer and readability.
+and defines both hierachical data [schemas](https://isatools.readthedocs.io/en/latest/isamodel.html) (XML, JSON) as well as a tab delimited format (Tab)
+to facilitate data transfer and readability.
 
 ### What problem does our tool solve?
+While frameworks like the ISA exists, there is a barrier for data generators to compile their data in these standardized formats. Using our tool, users are able to generate ISA commons compliant spreadsheets where metadata about investigations can be collected and continually validated without requiring detailed familiarity of schema structure up front.
 
-Our tool is a Google sheets application which facilitates the collection of metadata according to 
-[schema](https://github.com/ISA-tools/Configuration-Files/tree/master/isaconfig-default_v2015-07-02) 
-developed by the ISA commons.
-While frameworks like the ISA exists, there is a barrier for data generators to compile their data in these standardized formats. 
-Through our tool, users are able to generate ISA commons compliant spreadsheets where metadata about investigations can be collected
-and continually validated without requiring detailed familiarity of schema structure up front.
+Our tool is a Google sheets application build surrounding the ISA framework which facilitates the collection of metadata according to 
+[schema](https://github.com/ISA-tools/Configuration-Files/tree/master/isaconfig-default_v2015-07-02). Additionally, the ISA framework has a large suite of [tools](https://isa-tools.org/) that can be used in conjunction with the ISA-Sheets or ISA-ATTRACTION making it a valuable and versatile tool. 
+
+Our tool aims to: 
+1. Facilitate metadata collection using a familiar user interface
+2. Allow the portability of (meta)data entry to the data source 
+3. Facilitate the upload of structured (meta)data to the cloud for easy sharing
+
+### Overview of the tool 
 
 ![workflow diagram](https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/main/static/ISASheetsWorkflow.png)
 
-## How to use our tool:
+## Installation
+
+### From Github
+
+### From Docker
+
+## Using ISA-*
 
 ### Loading an ISA Tab template from schema
 
 ### Validating entered data
+
+## People
+
+Rance Nault, Michigan State University, naultran@msu.edu, **Team Lead and Corresponding**
+
+Dale George, Northwestern University, dale.george@northwestern.edu
+
+Diana Ma, Hippocampus Analytics, diana.ma@hippocampusanalytics.com
+
+Diego Perez Ruiz, The University of Manchester, diego.perezruiz@manchester.ac.uk
+
+Anthony Valente, University of Washington, valenta4@uw.edu
