@@ -1,5 +1,5 @@
 # ISASheets
-![logo](https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/main/static/ISASheetLogo.png)
+![logo](static/ISASheetLogo.png)
 
 ### What is FAIR data and the ISA model?
 
@@ -66,7 +66,7 @@ and press `test` to open a new spreadsheet with the Add-on enabled.
 ![execute test](static/installation_github_execute_test.png)
 
 ### From the Google marketplace
-** Stay tuned...**
+*Stay tuned...*
 
 
 ## Using ISASheets
