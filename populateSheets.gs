@@ -1,11 +1,13 @@
 // This is a menu for just testing purposes.
 // TODO: Replace with actual menu options.
+/*
 function onOpen() {
   SpreadsheetApp.getUi()
       .createMenu('Test')
         .addItem('Test', 'inputConfigs')
   .addToUi();
 }
+*/
 // End of testing code.
 
 

@@ -64,6 +64,7 @@ and press `test` to open a new spreadsheet with the Add-on enabled.
 
 ![execute test](static/installation_github_execute_test.png)
 
+
 ## Using ISA-*
 
 ### Loading an ISA Tab template from schema
