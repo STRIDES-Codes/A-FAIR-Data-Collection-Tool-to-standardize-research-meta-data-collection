@@ -1,6 +1,4 @@
-# A FAIR Data Collection Tool to standardize research metadata collection
-
-## Introduction:
+# ISA-Sheets or ISA-ATTRACTION
 
 ### What is FAIR data and the ISA model?
 
@@ -22,8 +20,26 @@ and continually validated without requiring detailed familiarity of schema struc
 
 ![workflow diagram](https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/main/static/ISASheetsWorkflow.png)
 
-## How to use our tool:
+## Installation
+
+### From Github
+
+### From Docker
+
+## Using ISA-*
 
 ### Loading an ISA Tab template from schema
 
 ### Validating entered data
+
+## People
+
+Rance Nault, Michigan State University, naultran@msu.edu, **Team Lead and Corresponding**
+
+Dale George, Northwestern University, dale.george@northwestern.edu
+
+Diana Ma, Hippocampus Analytics, diana.ma@hippocampusanalytics.com
+
+Diego Perez Ruiz, The University of Manchester, diego.perezruiz@manchester.ac.uk
+
+Anthony Valente, University of Washington, valenta4@uw.edu
