@@ -51,6 +51,9 @@ Press the ![pull](static/installation_github_pull_icon.png) icon and select `pul
 6. **Create a new spreadsheet and deploy:**
 In a new tab, create a new Google Sheets document and give it a name that makes sense to you.
 Navigate back to the tab with your ISA-Sheets script and select `Test as add on...` from the `run` menu.
+
+![run menu](static/installation_github_run_menu.png)
+
 In the popup window, select `Installed and enabled` from the `Installation config` menu,
 and click `select doc` to select the spreadsheet you made.
 After clicking save, you can select the test in the `Execute Saved Test` list above 
