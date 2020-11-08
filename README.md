@@ -13,7 +13,7 @@ to facilitate data transfer and readability.
 While frameworks like the ISA exists, there is a barrier for data generators to compile their data in these standardized formats. Using our tool, users are able to generate ISA commons compliant spreadsheets where metadata about investigations can be collected and continually validated without requiring detailed familiarity of schema structure up front.
 
 Our tool is a Google sheets application build surrounding the ISA framework which facilitates the collection of metadata according to 
-[schema](https://github.com/ISA-tools/Configuration-Files/tree/master/isaconfig-default_v2015-07-02). Additionally, the ISA framework has a large suite of [tools](https://isa-tools.org/) that can be used in conjunction with the ISA-Sheets or ISA-ATTRACTION making it a valuable and versatile tool. 
+[schema](https://github.com/ISA-tools/Configuration-Files/tree/master/isaconfig-default_v2015-07-02). Additionally, the ISA framework has a large suite of [tools](https://isa-tools.org/) that can be used in conjunction with the ISA-Sheets making it a valuable and versatile tool. 
 
 Our tool aims to: 
 1. Facilitate metadata collection using a familiar user interface
