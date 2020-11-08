@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body onload="myFunction()">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+    <? var configChoices = listConfigsGit() ?>
+    <div id = "checkbox-form", class="form-group">
+      <h3> Select relevant ISA templates to load: </h3>
+      <div id="checklists" style="font-weight: bold; font-size: 110%; vertical-align: middle; display: inline-block; padding-bottom: 1em">
+      </div>
+      <button style="float:right;" id="selectTemplates" class="action" onclick="submitForm();">SelectTemplates</button>
+    </div>
+    
+    <script>
+      function myFunction() {
+        var choiceDiv = document.getElementById('checklists');
+        var choices = <?= configChoices ?>;
+        var choicesParsed = JSON.parse(choices);
+        for (var i = 0; i < choicesParsed.length; i++){
+          var checkbox = document.createElement('input');
+          checkbox.type = "checkbox";
+          checkbox.name = "configurationUrl";
+          
+          checkbox.value = choicesParsed[i].name;
+          checkbox.id = choicesParsed[i].download_url;
+
+          var checklabel = JSON.stringify(choicesParsed[i].name).replace(/\"/g, "");
+          var label = document.createElement('label');
+          label.htmlFor = choicesParsed[i].name;
+          label.appendChild(document.createTextNode(checklabel))
+          
+          choiceDiv.appendChild(checkbox);
+          choiceDiv.appendChild(label);
+          choiceDiv.appendChild(document.createElement('br'));
+        }
+      }
+      
+      
+      function submitForm() {
+        var configs = document.getElementsByName('configurationUrl');
+        var selected = [];
+        for (var i=0; i<configs.length; i++) {
+          if (configs[i].checked) {
+            selected.push(configs[i].id);
+          }
+        }
+       
+        google.script.run.test();
+    }
+    
+    </script>
+  </body>
+</html>
+
+
