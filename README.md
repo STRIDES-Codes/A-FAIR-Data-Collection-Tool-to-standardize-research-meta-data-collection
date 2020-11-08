@@ -56,8 +56,13 @@ Navigate back to the tab with your ISA-Sheets script and select `Test as add on.
 
 In the popup window, select `Installed and enabled` from the `Installation config` menu,
 and click `select doc` to select the spreadsheet you made.
+
+![configure test](static/installation_github_configure_test.png)
+
 After clicking save, you can select the test in the `Execute Saved Test` list above 
 and press `test` to open a new spreadsheet with the Add-on enabled.
+
+![execute test](static/installation_github_execute_test.png)
 
 ## Using ISA-*
 
