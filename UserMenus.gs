@@ -13,10 +13,7 @@
 //Create new assay -> triggers the import of one of the assay xml files (drop down menu possible?) --> Can call 'inputConfigs' for now
 
 //Add column -> allows a user to add a column and specific the 'rules' (e.g. is is a string).
-
-// Some sample code for now. This is how to comment
-// Maybe we can break it down into user interface and then the different major functions
-
+                                                                                                                                         
 function onOpen() {
   SpreadsheetApp.getUi() 
       .createMenu('ISA-Sheets / ISA-Attraction - MAIN MENU')
