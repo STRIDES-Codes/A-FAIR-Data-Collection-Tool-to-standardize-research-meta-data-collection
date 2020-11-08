@@ -1,4 +1,5 @@
 // This is a menu for just testing purposes.
+// TODO: Replace with actual menu options.
 function onOpen() {
   SpreadsheetApp.getUi()
       .createMenu('Test')
@@ -9,20 +10,17 @@ function onOpen() {
 function testSheet(){
   createEmpty('testsheet2', 'TRUE');
 }
-
-function createEmpty(name, hidden) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet();
-  if (!sheet.getSheetByName(name)){
-    sheet.insertSheet(name);
-    if (hidden == 'TRUE') {
-      sheet.getSheetByName(name).hideSheet();
-    }
-  }
-}
+// End of testing code.
 
 
-// Name of the sheet where the field information will be added
-function addFieldColumn(sheetname, field){
+
+/** 
+  * Populates the specified sheet with field data from an ISA XML configuration
+  * @param sheetname the name of the sheet that will be populated with the data
+  * @param field is an object from the processXML functions
+  * @return none
+*/
+function addFieldData(sheetname, field){
   createEmpty(sheetname, 'FALSE')
   createEmpty('_' + sheetname, 'TRUE')
   
@@ -51,12 +49,36 @@ function addFieldColumn(sheetname, field){
   // It also breaks on NULL.
   // Headers also aren't recorded.
   
-  var addLastRow1 = addLastRow(1, template_hidden, header);
+  addLastRow(1, template_hidden, header);
   ammendLastRow(2, template_hidden, data_type.getValue());
   ammendLastRow(3, template_hidden, file_field.getValue());
   // ammendLastRow(4, template_hidden, multiple.getValue());
 }
 
 
-// Basic Utilities
-//
+/** 
+  * Populates the specified sheet with protocol data from an ISA XML configuration
+  * @param sheetname the name of the sheet that will be populated with the data
+  * @param field is an object from the processXML functions
+  * @return none
+*/
+function addProtocolData(sheetname, field){
+  createEmpty(sheetname, 'FALSE')
+  createEmpty('_' + sheetname, 'TRUE')
+  
+  var template = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetname);
+  var template_hidden = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('_' + sheetname);
+  
+  // Get field information from parsed XML object
+  var protocol_type = field.getAttribute('protocol-type').getValue();  
+  
+  // Find the last empty header column.
+  if (sheetname != 'investigation'){
+    addLastColumn(1, template, 'Protocol REF [' + protocol_type + ']');
+    addLastRow(1, template_hidden, protocol_type);
+    Logger.log('here:' + protocol_type);
+  } else {
+    // Does not behave the same way in investigation
+    Logger.log('investigation protocol');
+  }
+}

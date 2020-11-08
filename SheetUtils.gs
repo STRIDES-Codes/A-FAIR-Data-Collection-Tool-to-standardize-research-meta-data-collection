@@ -1,4 +1,14 @@
 // Add a value to the last column of a spreadsheet
+function createEmpty(name, hidden) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet();
+  if (!sheet.getSheetByName(name)){
+    sheet.insertSheet(name);
+    if (hidden == 'TRUE') {
+      sheet.getSheetByName(name).hideSheet();
+    }
+  }
+}
+
 function addLastColumn(row, sheet, value){
   var myRange = sheet.getRange(row, sheet.getLastColumn() + 1);
   myRange.setValue(value);
