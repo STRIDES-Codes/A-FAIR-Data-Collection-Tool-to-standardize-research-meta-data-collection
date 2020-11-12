@@ -17,9 +17,9 @@
 function onOpen() {
   SpreadsheetApp.getUi() 
       .createMenu('ISASheets')
-      .addItem('Create new Investigation ', 'investigation')
-      .addItem('Create new Study', 'inputConfigs')
-      .addItem('Create new Assay ', 'inputConfigs')
+      .addItem('Create new Investigation ', 'openConfigSelection')
+      .addItem('Create new Study', 'openConfigSelection')
+      .addItem('Create new Assay ', 'openConfigSelection')
       .addItem('Add column', 'addacolumn')
       .addItem('Export All Sheets', 'exportAllSheets')
       .addSeparator()

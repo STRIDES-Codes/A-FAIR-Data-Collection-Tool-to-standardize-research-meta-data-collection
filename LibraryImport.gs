@@ -1,16 +1,3 @@
-/*
-function onOpen() {
-  SpreadsheetApp.getUi()
-      .createMenu('Test2')
-        .addItem('Test2', 'openSideBar')
-  .addToUi();
-}
-*/
-
-function openSideBar(){
-  loadSidebar('ConfigurationSelection','Select');
-}
-// The following code is used to import libraries of XML configurations
 
 /** Lists the files in a the ISA configurations Github repository.
   * This version uses a hard-coded path to the codeathon repo because of 
@@ -26,18 +13,23 @@ function listConfigsGit() {
   return strides_repo
 }
 
+/** Opens the sidebar for selection the XML configurations
+*/
+function openSideBar(){
+  loadSidebar('ConfigurationSelection','Select');
+}
+
+/** Loop through the selected XML configurations and initiate their import.
+  * Function is called from the ConfigurationSelection.html template
+*/
 function loadConfigs(configs){
-  Logger.log('here');
-  Logger.log(configs);
-  Logger.log('test');
+  for (var i = 0; i < configs.length; i++){
+    initImport(configs[i]);
+  }
 }
 
-function test(){
-  Logger.log('here');
-  Logger.log('test');
-}
-
-
+/** Generic function for loading HTML template
+*/
 function loadSidebar(template, title) {
   var html = (HtmlService.createTemplateFromFile(template).evaluate())
        .setSandboxMode(HtmlService.SandboxMode.IFRAME)
