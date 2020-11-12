@@ -1,17 +1,3 @@
-// This is a menu for just testing purposes.
-// TODO: Replace with actual menu options.
-/*
-function onOpen() {
-  SpreadsheetApp.getUi()
-      .createMenu('Test')
-        .addItem('Test', 'inputConfigs')
-  .addToUi();
-}
-*/
-// End of testing code.
-
-
-
 /** 
   * Populates the specified sheet with field data from an ISA XML configuration
   * @param sheetname the name of the sheet that will be populated with the data

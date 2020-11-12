@@ -47,3 +47,13 @@ function tryParse(field, criteria){
   }
   return value
 }
+
+/** Generic function for loading HTML template
+*/
+function loadSidebar(template, title) {
+  var html = (HtmlService.createTemplateFromFile(template).evaluate())
+       .setSandboxMode(HtmlService.SandboxMode.IFRAME)
+       .setTitle(title)
+  SpreadsheetApp.getUi() 
+        .showSidebar(html);
+}

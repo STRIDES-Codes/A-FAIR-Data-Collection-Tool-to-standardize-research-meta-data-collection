@@ -37,6 +37,9 @@
         }
       }
       
+      function onSuccess(){
+        alert('Yay!');
+      }
       
       function submitForm() {
         var configs = document.getElementsByName('configurationUrl');
@@ -46,9 +49,8 @@
             selected.push(configs[i].id);
           }
         }
-       
-        google.script.run.test();
-    }
+        google.script.run.withSuccessHandler(onSuccess).withFailureHandler(error => {alert(error.message);}).loadConfigs(selected);
+      }
     
     </script>
   </body>
