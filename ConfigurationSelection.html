@@ -38,13 +38,13 @@
       }
       
       function onSuccess(){
-        alert('Yay!');
+        document.getElementById('checkbox-form').style.display = 'none';
       }
       
       function submitForm() {
         var configs = document.getElementsByName('configurationUrl');
         var selected = [];
-        for (var i=0; i<configs.length; i++) {
+        for (var i = 0; i<configs.length; i++) {
           if (configs[i].checked) {
             selected.push(configs[i].id);
           }

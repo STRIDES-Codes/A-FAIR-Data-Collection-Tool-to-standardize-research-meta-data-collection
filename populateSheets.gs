@@ -12,19 +12,26 @@ function addFieldData(sheetname, field){
   var template_hidden = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('_' + sheetname);
   
   // Get field information from parsed XML object
+  var requirements = []
   var header = tryParse(field, 'header');
   var data_type = tryParse(field, 'data-type');
   var file_field = tryParse(field, 'is-file-field');
   var multiple = tryParse(field, 'is-multiple-value');
   var hidden = tryParse(field, 'is-hidden');
   var forced_ontology = tryParse(field, 'is-forced-ontology');
+  requirements.header = header;
+  requirements.data_type = data_type;
   
+  var descriptionField = field.getChildren();
+  var comment = descriptionField[0].getValue();
 
   // Find the last empty header column.
   if (sheetname != 'investigation'){
-    addLastColumn(1, template, header);
+    var myRange = addLastColumn(1, template, header, comment);
+    applyRequirements('column', requirements, myRange);
   } else {
-    addLastRow(1, template, header);
+    var myRange = addLastRow(1, template, header, comment);
+    applyRequirements('row', requirements, myRange);
   }
  
   // The idea here is to have a hidden tab that records all the 'rules'
@@ -32,7 +39,7 @@ function addFieldData(sheetname, field){
   // It also breaks on NULL.
   // Headers also aren't recorded.
   
-  addLastRow(1, template_hidden, header);
+  addLastRow(1, template_hidden, header, comment);
   ammendLastRow(2, template_hidden, data_type);
   ammendLastRow(3, template_hidden, file_field);
   ammendLastRow(4, template_hidden, multiple);

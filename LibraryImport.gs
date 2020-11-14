@@ -15,7 +15,7 @@ function listConfigsGit() {
 
 /** Opens the sidebar for selection the XML configurations
 */
-function openSideBar(){
+function openConfigSelection(){
   loadSidebar('ConfigurationSelection','Select');
 }
 

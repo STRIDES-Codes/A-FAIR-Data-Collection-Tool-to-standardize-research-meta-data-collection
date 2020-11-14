@@ -1,13 +1,12 @@
 // This document is used to parse the XML templates
-/**
-Use this function to initiate testing of individual functions.
+
+//Use this function to initiate testing of individual functions.
 function runAllTest(){
-  runTest('https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/main/XML/investigation.xml');
-  runTest('https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/UsersMenu/XML/studySample.xml');
-  runTest('https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/main/XML/histology.xml');
+  initImport('https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/main/XML/investigation.xml');
+  // runTest('https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/UsersMenu/XML/studySample.xml');
+  //runTest('https://raw.githubusercontent.com/STRIDES-Codes/A-FAIR-Data-Collection-Tool-to-standardize-research-meta-data-collection/main/XML/histology.xml');
 }
-// This is the end of testing code.
-*/
+
 
 
 /**
@@ -66,6 +65,8 @@ function processXMLinvestigation(fields){
   for (var i = 0; i < fields.length; i++) {
     if (fields[i].getName() == 'field') {
       var addField = addFieldData('investigation', fields[i])
+      //var thisItem = fields[i].getChildren();
+      //Logger.log(thisItem[0].getValue());
     } 
   }
 }
